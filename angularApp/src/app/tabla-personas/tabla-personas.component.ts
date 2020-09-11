@@ -9,7 +9,7 @@ export class TablaPersonasComponent implements OnInit {
   constructor() {}
 
   title = 'hola';
-  
+  arreglo = ['felipe','juan'];
   @Input()
   customTitle: string;
 
