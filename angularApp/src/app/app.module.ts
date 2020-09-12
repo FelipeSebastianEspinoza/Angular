@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TablaPersonasComponent } from './tabla-personas/tabla-personas.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [AppComponent, TablaPersonasComponent],
+  declarations: [AppComponent, TablaPersonasComponent, UserComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

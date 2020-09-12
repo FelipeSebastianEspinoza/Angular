@@ -10,8 +10,15 @@ export class TablaPersonasComponent implements OnInit {
 
   title = 'hola';
   arreglo = ['felipe','juan'];
+  activado=false;
+
+
+  
   @Input()
   customTitle: string;
 
+
+
+  
   ngOnInit(): void {}
 }
