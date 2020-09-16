@@ -2,7 +2,7 @@
 <h2>{{ customTitle }}</h2>
 
 <form (submit)="addUser(newUser)">
-  <input type="text" #newUser>
+  <input type="text" #newUser />
   <button>crear usuario</button>
 </form>
 
@@ -12,3 +12,14 @@
     <button (click)="deteleUser(user)">Delete</button>
   </li>
 </ul>
+
+<div>
+  <form>
+    <input type="name" name="name" [(ngModel)]="name"/>
+    <br />
+    <input type="age" name="age" [(ngModel)]="age"/>
+  </form>
+  name:{{ name }}
+  <br />
+  age:{{ age }}
+</div>

@@ -12,6 +12,9 @@ export class TablaPersonasComponent implements OnInit {
   users = ['felipe', 'juan'];
   activado = false;
 
+  name = 'john';
+  age = '15';
+
   @Input()
   customTitle: string;
 
@@ -25,7 +28,7 @@ export class TablaPersonasComponent implements OnInit {
   addUser(newUser) {
     this.users.push(newUser.value);
     console.log(newUser.value);
-    newUser.value='';
+    newUser.value = '';
     newUser.focus();
     return false;
   }
