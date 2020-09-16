@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-tabla-personas',
@@ -9,16 +9,26 @@ export class TablaPersonasComponent implements OnInit {
   constructor() {}
 
   title = 'hola';
-  arreglo = ['felipe','juan'];
-  activado=false;
+  users = ['felipe', 'juan'];
+  activado = false;
 
-
-  
   @Input()
   customTitle: string;
 
+  deteleUser(user) {
+    for (let i = 0; i < this.users.length; i++) {
+      if (user == this.users[i]) {
+        this.users.splice(i, 1);
+      }
+    }
+  }
+  addUser(newUser) {
+    this.users.push(newUser.value);
+    console.log(newUser.value);
+    newUser.value='';
+    newUser.focus();
+    return false;
+  }
 
-
-  
   ngOnInit(): void {}
 }
