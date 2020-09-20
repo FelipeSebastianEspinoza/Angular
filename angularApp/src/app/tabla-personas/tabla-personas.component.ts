@@ -1,12 +1,21 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { DataService } from '../data.service';
+
 @Component({
   selector: 'app-tabla-personas',
   templateUrl: './tabla-personas.component.html',
   styleUrls: ['./tabla-personas.component.css'],
 })
+
+
 export class TablaPersonasComponent implements OnInit {
-  constructor() {}
+  posts = [];
+  constructor(private dataService: DataService) {
+    this.dataService.getData().subscribe((data) => {
+      this.posts = data;
+    });
+  }
 
   title = 'hola';
   users = ['felipe', 'juan'];
@@ -32,6 +41,8 @@ export class TablaPersonasComponent implements OnInit {
     newUser.focus();
     return false;
   }
+
+ 
 
   ngOnInit(): void {}
 }
