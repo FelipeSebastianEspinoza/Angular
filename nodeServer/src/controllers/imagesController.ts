@@ -7,7 +7,7 @@ class ImagesController {
    connection.query('DESCRIBE images');
    res.json('images');
   }
-}
+} 
 
 const imagesController = new ImagesController();
 export default imagesController;
