@@ -1,4 +1,5 @@
 import { Router } from "express";
+import ImagesController from '../controllers/imagesController' 
 
 class ImagesRoutes {
   public router: Router = Router();
@@ -6,7 +7,7 @@ class ImagesRoutes {
     this.config();
   }
   config(): void {
-    this.router.get("/", (req, res) => res.send("images"));
+    this.router.get("/",ImagesController.index);
   }
 }
 const imagesRoutes = new ImagesRoutes();
