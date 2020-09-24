@@ -7,7 +7,11 @@ class ImagesRoutes {
     this.config();
   }
   config(): void {
-    this.router.get("/",ImagesController.index);
+    this.router.get("/",ImagesController.list);
+    this.router.get("/:id",ImagesController.listOne);
+    this.router.post('/',ImagesController.create);
+    this.router.put('/:id',ImagesController.update);
+    this.router.delete('/:id',ImagesController.delete);
   }
 }
 const imagesRoutes = new ImagesRoutes();
