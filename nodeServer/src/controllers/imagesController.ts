@@ -4,7 +4,7 @@ import connection from "../database";
 class ImagesController {
   public async list(req: Request, res: Response) {
     const images = connection.query("SELECT * FROM images");
-    res.json(images);
+    res.json(images); 
   }
   public async listOne(req: Request, res: Response): Promise<void> {
     const { id } = req.params;
